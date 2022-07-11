@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이펫</title>
+    <!-- 여백 초기화 코드 -->
+    <link rel="stylesheet" href="./style/reset.css" type="text/css">
+    <style>
+        /* cssreset.com에서 리셋하기 */
+        body{
+            font-family: "맑은 고딕", Arial, sans-serif;
+            font-size: 12px;
+            color: #333;
+        }
+
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        /* 체크박스를 안보이게 숨기는 기능 */
+        #toggle{
+            display: none;
+        }
+
+        header{
+            background-color: #333;
+            color: white;
+            height: 64px;
+            position: relative;
+        }
+
+        header>h1{
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        header>h1 img{
+            height: 50px;
+        }
+
+        header>label{
+            position: absolute;
+            left: 1%; top: 10%;
+        }
+
+        .cart{
+            position: absolute;
+            right: 1%; top: 10%;
+        }
+
+        main{height: 500px;}
+
+        footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        footer>address{
+            line-height: 50px; font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <!-- 헤더영역 시작 -->
+    <header>
+        <h1>
+            <a href="exec01.html" title="메인페이지 바로가기"> <img src="./images/logo_clr.png" alt="상단로고"> </a>
+        </h1>
+
+        <label for="toggle">
+            <img src="./images/topIcon_burger.png" alt="버거메뉴">
+        </label>
+
+        <a href="#" title="장바구니" class="cart">
+            <img src="./images/topIcon_cart.png" alt="카트">
+        </a>
+    </header>
+
+    <!-- 콘텐츠영역 시작 -->
+    <main>
+        메인콘텐츠 영역
+    </main>
+
+    <!-- 푸터영역 시작 -->
+    <footer>
+        <address>
+            copytight&copy;2022 지니펫 모바일 allrights reserved.
+        </address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제1_메인페이지</title>
+    <style>
+        *{
+            margin: 0px; padding: 0px;
+        }
+
+        header, main, footer{
+            width: 1200px;
+            margin: 0px auto;
+        }
+
+        header{
+            height: 180px;
+            background-color: #ffff00;
+        }
+
+        header>h1{
+            width: 150px; height: 50px;
+            background-color: #ccc;
+            margin: 0px auto;        
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        header>nav{
+            height: 50px;
+            margin-top: 80px;
+            background-color: green;
+        }
+
+        main>section{}
+
+        section>.visual{height: 500px; background-color: gainsboro;}
+        section>.l_con{height: 500px; width: 600px; float: left; background-color: khaki;}
+        section>.r_con{height: 500px; width: 600px; float: left; background-color:darkred;}
+
+        footer{background-color: #333; height: 100px; clear: both; color: white;}
+        footer>h2{width: 300px; height: 100px; float: left; background-color: beige; color: #333;}
+        footer>address{width: 900px; height: 100px; float: right; background-color: cornflowerblue;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>상단로고</h1>
+        <nav>상단 내비게이션</nav>
+    </header>
+
+    <main>
+        <section>
+            <article class="visual">
+                메인 슬라이드 영역
+            </article>
+            
+            <article class="l_con">
+                왼쪽 하단 컨텐츠
+            </article>
+
+            <article class="r_con">
+                오른쪽 하단 컨텐츠
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <h2>하단로고</h2>
+        <address>회사 주소, 대표자명, 카피라이트....</address>
+    </footer>
+</body>
+</html>

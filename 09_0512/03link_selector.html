@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03link(06.링크 07.반응)_selector</title>
+    <style>
+
+        /* 1. 링크선택자 - a태그 선택자로 대체 가능해서 잘 안씀*/
+        /* .a01:link{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        } */
+        .a01, .a02{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 4px 20px;
+            transition: 0.5s;
+        }
+        .a01{
+            color: green;
+        }
+        .a02{
+            color: purple;
+        }
+
+        .a01:hover, .a02:hover{
+            color: rgb(206, 255, 71);
+            background-color: rgb(0, 53, 151);
+        }
+
+        /* 2. 반응선택자 */
+        header > a{
+            border: 1px solid #333333;
+            padding: 4px 20px;
+            text-decoration: none;
+            color: #333333;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;/*영문 소문자를 모두 대문자로 전환*/
+        }
+        header > a:hover{ /*헤더의 자손 a요소에 마우스를 오버하면 서식을 적용*/
+            background-color: #000000; /*색상코드 작성 시 6코드인데 같은 코드일 경우 생략가능 000,fff*/
+            color: white;
+            font-weight: bold;
+        }
+        footer {
+            font-size: 11px;
+            text-align: center;
+            background: #333333;
+            line-height: 60px;
+            margin-top: 60px;
+        }
+        footer > a{
+            color: white;
+            text-decoration: none;
+        }
+        footer > a:hover{
+            text-decoration: underline;
+        }
+
+        /* 4. active 선택자(잘 안씀) */
+        footer > a:active{
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+   <h2>03link(06.링크 07.반응)_selector(잘안씀) p.131, 149</h2>
+   <h3>1. 링크선택자 - :link, :visited</h3>
+   <p>href 속성을 가진 태그요소(a)에 서식을 적용하기 위한 선택자로서 :link, :visited선택자가 있다. 선택자 앞에 ':'기호가 들어가는데 이러한 서택자를 '가상클래스'라고 한다.</p>
+   <p>:link - 링크가 걸린 태그요소에 서식을 적욕</p>
+   <p>:visited - 링그가 걸린 태그요소를 클릭한 적이 있는 경우에만 서식을 적용.</p>
+
+    <a class="a01" href="http://www.naver.com" title="네이버 바로가기">네이버</a>
+    <a class="a02" href="http://www.coupang.com" title="쿠팡 바로가기">쿠팡</a>
+
+    <h3>2. 반응선택자 - :hover, :active(잘안씀)</h3>
+    <p>반응선택란 사용자는 마우스로 html태그요소에 마우스를 오버하였을 떄 또는 클릭을 하였을 때 서식이 적용되는 선택자이다.</p>
+
+    <p>:hover - 마우스로 해당하는 요소에 올리면 서식이 적용됨.</p>
+    <p>:active - 마우스로 해당하는 요소를 클릭하고 있을때만 서식이 적용됨</p>
+
+    <header>
+        <a href="#" title="로그인">LOGIN</a>
+        <a href="#" title="회원가입">SIGN UP</a>
+    </header>
+
+    <footer>
+        <a href="#" title="이용약관">이용약관</a>
+    </footer>
+</body>
+</html>

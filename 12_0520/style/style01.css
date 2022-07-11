@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+header, main{
+    margin: 0px auto;
+    width: 1050px;
+}
+
+header{
+    height: 50px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+
+header>h2{
+    line-height: 50px;
+}
+
+main{
+    height: 100px;
+    position: relative;
+}
+
+aside, article{
+    float: left;
+}
+
+article{
+    margin: 20px;
+    font-size: 12px;
+}
+
+article>img{
+    margin: 10px;
+}
+
+article>h3, article>p{
+    margin: 10px;
+}
+
+article>h3{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+article>p{
+    color: #ccc;
+}
+
+aside{
+    margin-top: 90px;
+    opacity: 0.4;
+}
+
+article:hover{
+    background-color: #ccc;
+    transition: 0.5s;
+    border-radius: 20px;
+}

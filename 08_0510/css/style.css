@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body{
+font-family: '나눔고딕', Arial, sans-serif;
+font-size: 12px;
+color: #333;
+line-height: 160%;
+width: 500px;
+text-align: justify;
+}
+h2{
+    color: rgb(30, 71, 255);
+font-size: 26px;
+margin: 10px 0px;
+}
+h3{
+    font-size: 18px;
+}
+.p01{
+    font-weight: bold; 
+    margin: 0px 0px;
+}
+.p02{font-weight: bold;color:}
+.txt01{color: rgb(61, 31, 192); font-weight: bold;}
+footer{text-align: right;}
+address{text-align: center; font-style: normal;line-height: 70px;font-size: 9px;}
+hr{border: 1px solid #cccccc;}
+/* 보더 : 두께 실선 색 */

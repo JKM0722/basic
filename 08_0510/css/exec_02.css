@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+img{
+    float: left;
+    width: 250px;
+}
+.div1{padding: 0px 300px;
+    width: 1000px;
+    font-size: 14px; 
+    color: rgb(85, 85, 85);
+    line-height: 20px;
+}
+.icon01{
+    color: white;
+    background-color: rgb(162, 142, 255);
+    border: 1px solid #333;
+    padding: 0px 3px;
+}
+.icon02{
+    border: 1px solid #333;
+    padding: 0px 3px;
+}
+h2{
+    font-size: 30px; 
+    color: blue;
+    margin: 12px 0px;
+}
+select{padding: 5px 3px; color: #333;}
+.star{color: red; font-size: 20px;}
+.review{
+    color: blueviolet;
+    border: 1px solid #333;
+    padding: 2px 5px;
+}
+hr{border: 1px solid rgb(230, 228, 228);}
+.card{
+    background-color: white;
+    border: 1px solid rgb(172, 172, 172);
+    color: #333;
+    padding: 2px 5px;
+}
+.location{
+    border: 1px solid rgb(138, 138, 138);
+    padding: 5px 50px;
+    color: red;
+    font-weight: bold;
+}
+.go{color: rgb(94, 119, 168);font-weight: bold;}
+.txt01{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+#won{   
+    color: red;
+    font-size: 23px;
+    vertical-align: bottom;
+}
+.txt02{
+    color: rgb(94, 119, 168); 
+    font-weight: bold;
+}
+.txt03{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+#won2{
+    color: blue;
+    font-size: 16px;
+    vertical-align: bottom;
+}
+#won3{
+    font-weight: bold;
+}

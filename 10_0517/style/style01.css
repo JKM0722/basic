@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+*{margin: 0px; padding: 0px;}
+body{
+    font-family: "맑은 고딕", arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+}
+
+table{
+    border-top: 3px solid rgb(241, 107, 166);
+    border-collapse: collapse; /*테두리 여백 제거*/
+    width: 700px;
+    margin: 0px auto; /*중간배치*/
+}
+
+table>caption{display: none;}
+
+table tr{
+    line-height: 26px;
+    border-bottom: 1px dashed #333333;
+}
+table tr:last-child{
+    border-bottom: none;
+}
+
+table tr th:first-child{width:80px}
+table tr th:nth-child(2){width:340px}
+table tr th:nth-child(3){width:100px}
+table tr th:nth-child(4){width:80px}
+table tr th:last-child{width:100px}
+
+table tr:first-child th{
+text-transform: uppercase;
+text-align: center;
+background-color: rgb(244, 154, 190);
+color: white;
+font-size: 13px;
+border-bottom: 1px solid rgb(241, 107, 166);
+}
+
+table tr:nth-child(2n){background-color: #fdffe1;}
+
+tr>td:first-child{
+    text-align: center;
+    color: #7e7e7e;
+}
+
+tr>td:nth-child(2)>a{
+    text-decoration: none;
+    color: rgb(109, 111, 117);
+}
+
+tr>td:nth-child(2)>a:hover{
+    text-decoration: underline;
+}
+
+tr>td:nth-child(3){
+    text-align: center;
+    font-weight: bold;
+    color: rgb(120, 120, 120);
+}
+
+tr>td:nth-child(4){
+    text-align: center;
+    color: #7e7e7e;
+}
+
+tr>td:last-child{
+    text-align: center;
+    color: #7e7e7e;
+}
+
+tr:last-child{
+    line-height: 70px;
+}
+
+tr:last-child input[type=text]{
+    width: 150px; 
+    padding: 3px;
+    border-radius: 0px;
+    border: 0.5px solid #333333;
+}
+
+tr:last-child input[type=submit]{
+    background-color: rgb(225, 96, 135);
+    border: 2px ridge rgb(225, 96, 135);
+    padding: 1px 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+tr:last-child input[type=radio]:checked{
+    accent-color: black;
+}

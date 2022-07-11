@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제_쿠팡 여성패션 콘텐츠 디자인하기</title>
+    <style>
+        .product{
+            width: 470px; height: 549px;
+            border-top: 3px solid #ff72be;
+            border-bottom: 2px solid #cccccc;
+            position: relative; /*현재 부모요소가 기준*/
+            font-size: 12px;
+        }
+        .product>img{
+            position: absolute; /*부모박스 안에서 위치를 설정한다*/
+            right: 0px; top: 0px; /*위치값으로 배치한다*/
+        }
+        .product>h3{
+            color: #ff72be;
+            font-size: 25px;
+            margin-bottom: 5px;
+            margin-top: 30px;
+            padding: 0px 20px;
+        }
+        .product a{
+            color: #333333;
+            text-decoration: none;
+        }
+        .a01{
+            font-size: 10px;
+            padding: 0px 20px;
+        }
+        .product>a:hover{
+            text-decoration: underline;
+        }
+        .product>dl{
+
+        }
+        .product>dl>dt{
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding-top: 180px;
+        }
+        .product>dl>dd{
+            margin: 20px 0px;
+        }
+        .product>dl>dd>a{
+            color: #ff72be;
+            border: 1px solid #ff72be;
+            padding: 6px 6px;
+            transition: 0.5s; /*애니매이션 효과 퍄퍄퍄퍄*/
+        }
+        .product>dl>dd>a:hover{
+            background-color: #ff72be;
+            color: white;
+            border: 1px solid #ff72be;
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <h3>여성패션</h3>
+        <a class="a01" href="#" title="바로가기">바로가기 ></a>
+        <dl>
+            <dt>hot 키워드</dt>
+            <dd><a href="#"> &#x0023;카디건 </a></dd>
+            <dd><a href="#"> &#x0023;원피스 </a></dd>
+            <dd><a href="#"> &#x0023;청바지 </a></dd>
+            <dd><a href="#"> &#x0023;크로스백 </a></dd>
+            <dd><a href="#"> &#x0023;운동화 </a></dd>
+            <dd><a href="#"> &#x0023;잠옷 </a></dd>
+        </dl>
+        <img src="./실습예제/product.jpg" alt="여성의류">
+    </div>
+</body>
+</html>
