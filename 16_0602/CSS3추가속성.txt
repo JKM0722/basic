@@ -1,0 +1,16 @@
+CSS3추가속성
+1. border-radius(모서리 둥글게)
+2. background(배경색, 배경이미지 2장이상)
+3. text effect(그림자)
+4. Transform(변형, 회전)
+5. Transition(전환, 애니메이션, 시간)
+6. Animation(키프레임) p.225
+7. Multiple Column(다단)
+8. Usesr Interface
+box-sizing, resize, outline
+
+calc(width-20%);
+
+http://leaverou.github.io/prefixfree/
+colorzilla.com
+

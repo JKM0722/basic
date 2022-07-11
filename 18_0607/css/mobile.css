@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+@media screen and (max-width:767px) {
+    .sub, .fa-search > span {
+        display: none;
+    }
+
+    header{
+        position: relative;
+        width: 100%; height: 60px;
+        background-color: #333;
+    }
+
+    .header_top > h1 {
+        width: 130px; 
+        margin: 0px auto;
+        padding-top: 5px;
+    }
+
+    .header_top > h1 img{
+        width: 100%; /*크기 자동 조정*/
+    }
+
+    .fa-bars, .fa-shopping-cart{
+        position: absolute; top: 17px;
+        color: white;
+        font-size: 1.6rem;
+    }
+
+    .fa-bars{
+        left: 20px;
+    }
+
+    .fa-shopping-cart{
+        right: 20px;
+    }
+
+    /* 내비게이션 서식 */
+    .lnb{
+        width: 100%;
+        position: fixed;
+        top: 540px; left: -100%;
+        transition: 0.5s;
+        z-index: 100;
+    }
+
+    .lnb > ul{
+        display: flex;
+        flex-wrap: wrap;
+        /* 영역을 벗어나면 다음줄로 넘김 */
+        justify-content: center;
+    }
+
+    .lnb > ul >li {
+        width: 44%;
+        margin: 0px 2px 4px 2px;
+        text-align: center;
+        background-color: rgb(94, 94, 94);
+    }
+
+    .lnb > ul >li > a{
+        display: block;
+        line-height: 40px;
+        color: white;
+    }
+
+    /* gnb서식 */
+    .gnb{
+        width: 100%; height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0px;
+        transition: 0.5s;
+        padding: 120px 4% 0px 4%;
+        box-sizing: border-box;
+        z-index: 10;
+        left: -100%;
+    }
+
+
+    .header_bottom .fa-times{
+        color: #fff;
+        font-size: 2.3rem;
+        padding: 10px;
+        z-index: 100;
+        position: fixed; 
+        left: -100%;
+        top: 30px;
+        transition: 0.5s;
+    }
+
+    .gnb > ul {
+
+    }
+
+    .gnb > ul > li {
+        padding: 0px 2%;
+        border-bottom: 1px solid#ccc;
+    }
+
+    .gnb > ul > li > a {
+        color: #fff;
+        font-size: 1rem;
+        line-height: 50px;
+        display: block;
+    }
+
+    /* 검색폼 서식 */
+    .header_top > fieldset{
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        /* left: 25%; */
+        transition: 0.5s;
+        left: -100%;
+    }
+
+    fieldset > legend{
+        display: none;
+    }
+
+    fieldset > #search{
+        width: 230px; height: 30px;
+        border-radius: 26px;
+        text-align: center;
+        border: none;
+    }
+
+    .fa-search{
+        font-size: 22px;
+        transform: translate(-36px, 4px);
+    }
+    
+    /* 토글 클릭 시 왼쪽에서 나오게 하기 */
+    #toggle:checked + header .header_top > fieldset {
+        left: 25%;
+    }
+
+    #toggle:checked + header .header_top > .lnb {
+        left: 0%;
+    }
+
+    #toggle:checked + header .header_bottom > .gnb {
+        left: 0%;
+    }
+
+    #toggle:checked + header .header_bottom > .fa-times {
+        left: 90%;
+    }
+
+
+}
+

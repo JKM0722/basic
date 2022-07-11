@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제2_모바일 컨텍트 어스</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 폰트 어썸 cdn 주소 -->
+
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0;padding: 0;
+        }
+
+        body{
+            font-family: "맑은 고딕", Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #333;
+        }
+
+        header{
+            background-color: #ccc;
+            line-height: 60px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        main{
+            padding: 50px 10px 50px 10px;
+        }
+
+
+        fieldset{
+            border: none;
+            margin: 0px auto;
+            height: 400px;
+            width: 340px;
+            background-color: rgb(243, 229, 229);
+            -webkit-box-shadow: 0px 2px 6px 3px rgba(51,51,51,0.19); 
+            box-shadow: 0px 2px 6px 3px rgba(51,51,51,0.19);
+        }
+
+        legend{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(0, 140, 196);
+            padding-top: 50px;
+        }
+
+        i{
+            color: rgb(0, 140, 196); 
+            font-size: 16px;
+            font-size: 30px;
+            width: 30px;
+            padding-right: 10px;
+        }
+
+        main p{
+                padding: 4px 0px;
+                text-align: center;
+            }
+
+        input[type='submit']{
+            background-color: rgb(0, 140, 196);
+            color: white;
+            padding: 6px 10px;
+            border: none;
+        }
+
+        input[type='text'], input[type='email'], textarea{
+            width: 276px;
+        }
+
+        .submit{margin-top: 20px;}
+
+        input[type=text], input[type=email], textarea{
+            height: 25px;
+            border-radius: 0;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+
+        ::placeholder{
+            font-family: '맑은 고딕', arial, helvetica, sans-serif;
+            padding-left: 5px;
+        }
+
+        textarea::placeholder{
+            padding-top: 2px;
+        }
+
+        textarea{margin-top: 10px;}
+
+
+
+        footer{
+            background-color: #333;
+            line-height: 40px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        상단 헤더영역
+    </header>
+
+    <main>
+        
+       <form name="문의하기" method="post" action="a.php">
+        <span class="contact">
+            <fieldset>
+                <legend>Contact Us</legend>
+                <p><i class="fas fa-user"></i><input type="text" maxlength="3" placeholder="First Name"></p>
+                <p><i class="fas fa-user"></i><input type="text" maxlength="6" placeholder="Last Name"></p>
+                <p><i class="fa-regular fa-envelope"></i><input type="email" placeholder="Email"></p>
+                <p><i class="fas fa-phone"></i><input type="text" placeholder="Phone"></p>
+                <p><i class="fas fa-pencil-alt"></i><textarea rows="5" placeholder="Message"></textarea></p>
+                <p class="submit"><input type="submit" value="Send"></p>
+            </fieldset>
+        </span>
+       </form>
+    </main>
+
+    <footer>
+        푸터영역
+    </footer>
+</body>
+</html>

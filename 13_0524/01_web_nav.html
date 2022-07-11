@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_web_navigation(웹 네비게이션)</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <style>
+        h2, p, h3{
+            padding: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 가로 네비 */
+        .gnb01{
+            width: 200px;
+            background: #333;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .gnb01>li>a{
+            color: white;
+            display: block; /*성격을 전환하여 영역을 넓혀줌 - 반응영역이 넓어짐. a태그는 inline*/
+        }
+
+        .gnb01>li>a:hover{
+            background-color: #ccc;
+            color: #333;
+            transition: 0.5s;
+        }
+
+        /* 세로 네비 */
+        .gnb02{
+            width: 1000px;
+            background-color: #003300;
+            /* height: 42px; 플로트 속성을 쓸때 줘야함 부모한테*/
+            display: flex; /*css3에서 추가된 속성 요즘 젤 많이 씀*/
+            justify-content: space-around;
+            /* https://studiomeal.com/archives/197 */
+            border-radius: 20px;
+        }
+
+        .gnb02>li{
+            line-height: 42px;
+            /* float: left; */
+            /* display: inline; */
+            /* display: inline-block; */
+        }
+
+        .gnb02>li>a{
+            color: white;
+            display: block;
+        }
+
+        .gnb02>li>a:hover{
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* 세로네비 + 서브메뉴 */
+
+        #navi{
+            background-color: rgb(0, 73, 0, 0.8);
+            height: 42px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        #navi:hover{
+            height: 300px;
+        }
+
+        nav{
+           width: 100%; height: 42px;
+           background-color: #003300;
+        }
+
+        .gnb03{
+            width: 1000px; height: 42px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0px auto;
+        }
+
+        .gnb03>li{
+            line-height: 42px;
+        }
+
+        .gnb03>li>a{
+            color: white;
+            display: block;
+        }
+
+        .gnb03>li>a:hover{
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* 서브메뉴 서식 */
+
+        .sub{
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .sub>li{
+
+        }
+
+        .sub>li>a{
+            color: white;
+        }
+
+        .sub>li>a:hover{
+            color: orange;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>01_web_navigation(웹 네비게이션) p.267</h2>
+    <p>웹페이지에서 사용자가 정보를 찾기 위한 가장 기본적인 수단으로서 내비게이션(메뉴)라고 하며, 종류에는 메인메뉴, 서브메뉴, 검색메뉴, 로그인메뉴, 사이드메뉴, 드롭다운 메뉴, 탭메뉴, 사용자의 현재 위치를 알려주는 '로케이션'메뉴 등이 있다.</p>
+
+    <p>gnb: global navigation bar의 약자로서 보통 메인메뉴를 작성할 때 사용하는 명칭</p>
+
+    <p>inb: local navigation bar의 약자로서 메인메뉴 외에 서브메뉴나 콘텐츠 영역에서 사용되는 메뉴를 작성하고자 할 때 사용하는 명칭이다.</p>
+
+    <h3>1. 세로 방향의 내비게이션 메뉴</h3>
+
+        <ul class="gnb01">
+            <li><a href="#" title="메뉴1">메뉴1</a></li>
+            <li><a href="#" title="메뉴2">메뉴2</a></li>
+            <li><a href="#" title="메뉴3">메뉴3</a></li>
+            <li><a href="#" title="메뉴4">메뉴4</a></li>
+            <li><a href="#" title="메뉴5">메뉴5</a></li>
+        </ul>
+
+    <h3>2. 가로방향의 내비게이션 메뉴</h3>
+    <ul class="gnb02">
+        <li><a href="#" title="메뉴1">브랜드 스토리</a></li>
+        <li><a href="#" title="메뉴2">새로워진 뚜레쥬르</a></li>
+        <li><a href="#" title="메뉴3">제품 안내</a></li>
+        <li><a href="#" title="메뉴4">이벤트&#x0026;멤버십</a></li>
+        <li><a href="#" title="메뉴5">쇼핑몰&#x0026;케이크 배달신청</a></li>
+    </ul>
+
+    <h3>3. 메인, 서브메뉴가 있는 2단 내비게이션 메뉴</h3>
+    <div id="navi"> <!--서브메뉴를 보이게 하고 숨기게 하는 박스 요소-->
+    <nav>
+    <ul class="gnb03">
+        <li><a href="#" title="메뉴1">브랜드 스토리</a>
+            <ul class="sub">
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="메뉴2">새로워진 뚜레쥬르</a>
+            <ul class="sub">
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="메뉴3">제품 안내</a>
+            <ul class="sub">
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="메뉴4">이벤트&멤버십</a>
+            <ul class="sub">
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="메뉴5">쇼핑몰&케이크 배달신청</a>
+            <ul class="sub">
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+                <li><a href="#" title="submenu">서브메뉴</a></li>
+            </ul>
+        </li>
+    </ul>
+    </nav>
+    </div>
+
+<h3>4. 푸터영역에 들어가는 회사소개, 이용약관 메뉴</h3>
+    <ul>
+        <li><a href="#" title="메뉴1">메뉴1</a></li>
+        <li><a href="#" title="메뉴2">메뉴2</a></li>
+        <li><a href="#" title="메뉴3">메뉴3</a></li>
+        <li><a href="#" title="메뉴4">메뉴4</a></li>
+        <li><a href="#" title="메뉴5">메뉴5</a></li>
+    </ul>
+
+    
+</body>
+</html>

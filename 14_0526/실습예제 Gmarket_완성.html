@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제 Gmarket</title>
+
+    <style>
+    *{margin: 0px; padding: 0px;}
+    ol, ul, li{list-style: none;}
+    a{text-decoration: none; color: #333;}
+
+    h1{
+        width: 180px; height: 48px;
+        background-image: url('./images/common.png');
+        background-position: 0px 0px;
+    }
+    h1>a{
+        text-indent: -9999px;
+        display: block;
+        line-height: 48px;
+    }
+
+    .total_menu{
+        display: block;
+        width: 210px; height: 50px;
+        background-image: url('./images/common.png');
+        background-position: 0px -240px;
+        text-indent: -9999px;
+    }
+
+    .gnb>li{
+        height: 44px; width: 200px;
+        background-color: #2253ad;
+        border-top: 1px solid rgb(255, 255, 255);
+    }
+    .gnb>li:hover{background-color: #043ba1;}
+    .gnb>li>a{
+        background-image: url('./images/main.png');
+        display: block;
+        height: 44px;
+        text-indent: -9999px;
+    }
+    .gnb>li:nth-child(2)>a{background-position: 0px -44px;}
+    .gnb>li:nth-child(3)>a{background-position: 0px -88px;}
+    .gnb>li:nth-child(4)>a{background-position: 0px -132px;}
+    .gnb>li:nth-child(5)>a{background-position: 0px -176px;}
+    .gnb>li:nth-child(6)>a{background-position: 0px -220px;}
+    .gnb>li:nth-child(7)>a{background-position: 0px -264px;}
+    .gnb>li:nth-child(8)>a{background-position: 0px -308px;}
+    .gnb>li:last-child>a{background-position: 0px -352px;}
+
+
+    /* 1. 카테고리 목록 숨기기 */
+    header > div > nav{display:none;}
+    /* 2. 전체 카테고리 클릭시 체크박스에 체크되면서 헤더의 자손 div의 자손 nav 화면에 보이게 하기 다시 클릭시 보이지 않게 하기 */
+    #total_menu:checked + header > div > nav{display:block;}
+
+    /* 3. 전체 카테고리 클릭시 배경 이미지 변경하게 하기 */
+    #total_menu:checked + header > div > label[for='total_menu']{background-position: -210px -240px;}
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="total_menu">
+    <header>
+        <h1>
+            <a href="http://ljw.dothome.co.kr/14-0526/index.html" title="메인페이지 바로가기">지마켓 로고</a>
+        </h1>
+    <div>
+    <label for="total_menu" class="total_menu">전체 카테고리</label>
+
+    <nav>
+    <ul class="gnb">
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+        <li><a href="http://ljw.dothome.co.kr/14-0526/exec.html#" title="메뉴">메뉴</a></li>
+    </ul>
+    </nav>
+    </div>
+    </header>
+</body>
+</html>

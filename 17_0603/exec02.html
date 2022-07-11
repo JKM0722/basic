@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습과제</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./script/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="/16_0602/css/reset.css">
+
+    <style>
+        /* 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+        /* 체크버튼 만들기 */
+        .check_circle_total{display: flex;}
+        .check_circle1, .check_circle2, .check_circle3{
+            width: 16px; height: 16px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-right: 5px;
+            position: relative;
+        }
+        .check_circle1>div, .check_circle2>div, .check_circle3>div{
+            background-color: white;
+            border-radius: 50%;
+            width: 8px; height: 8px;
+            position: absolute;
+            top: 4px; left:4px;
+        }
+
+        /* 체크박스 삭제 */
+        input[type=radio]{display: none;}
+
+
+        main{
+            width: 450px; height: 600px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgb(134, 134, 134);
+            text-align: center;
+            margin: 0px auto;
+            margin-top: 20px;
+        }
+        article{
+            width: 400px; height: 580px;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+
+        .check_circle_total{
+            margin-left: 170px;
+        }
+
+        /* 슬라이드 */
+
+        .slide01{
+            display: flex;
+            position: relative; /*슬라이드 위한 위치 선정*/
+            height: 530px;
+            transition: 0.5s;
+            margin-top: 20px;
+        }
+
+        ul{
+            display: flex;
+        }
+
+        ul img{
+            width: 400px; height: 300px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+
+        ul img:hover{
+            transform: scale(1.1);
+        }
+
+        /* 1번 박스 */
+        ul li:first-child h3{
+            font-weight: bold;
+            font-size: 20px;
+            width: 400px;
+            margin-top: 30px;
+        }
+
+        ul li:first-child .p01{
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            width: 400px;
+        }
+
+        ul>li:first-child p{
+            width: 300px;
+            margin: 0px auto;
+        }
+
+        /*2번 박스*/
+
+        ul li:nth-child(2) img{
+            width: 200px; height: 200px;
+            margin: 50px 100px 50px 100px;
+            border-radius: 50%;
+        }
+
+        ul li:nth-child(2) h3{
+            font-family: 'Gowun Batang', serif;
+            color: red;
+            font-size: 30px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        ul li:nth-child(2) p{
+            color: #333;
+        }
+
+        .p02{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+
+        /* 눌렀을때 색반전 */
+        #btn01:checked ~ .check_circle_total .check_circle1{background-color: #333;}
+        #btn02:checked ~ .check_circle_total .check_circle2{background-color: #333;}
+        #btn03:checked ~ .check_circle_total .check_circle3{background-color: #333;}
+
+        /* 눌렀을떄 슬라이드 */
+        #btn01:checked ~ .slide01{left:0px;}
+        #btn02:checked ~ .slide01{left:-400px;}
+        #btn03:checked ~ .slide01{left:-800px;}
+    </style>
+
+</head>
+<body>
+    <main>
+    <article>
+        <input type="radio" name="a" id="btn01" checked="checked">
+        <input type="radio" name="a" id="btn02">
+        <input type="radio" name="a" id="btn03">
+        <div class="slide01">
+            <ul>
+                <li>
+                    <a href="#"><img src="./images/photo01.jpg" alt="1"></a> 
+                    <h3> 어느 맑은 날 오카야마를 만나는 것에 대하여</h3>
+                    <p class="p01">작성자 : 트레비</p>
+                    <p>오사카 옆 숨은 보석같은 여행지 오카야마로 떠나다</p>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/photo02.jpg" alt="2"></a>
+                    <h3>캘리포니아 가족여행</h3>
+                    <p>취향따라 즐기는<br>#짜릿한 재미 #새로운 경험</p>
+                    <p class="p02">enjoy california</p>
+                </li>
+                <li><a href="#"><img src="./images/photo03.jpg" alt="3"></a></li>
+            </ul>
+        </div>
+
+        <div class="check_circle_total">
+            <label for="btn01" class="b01">
+                <div class="check_circle1">
+                    <div></div>
+                </div>
+            </label>
+            <label for="btn02" class="b02">
+                <div class="check_circle2">
+                    <div></div>
+                </div>
+            </label>
+            <label for="btn03" class="b03">
+                <div class="check_circle3">
+                    <div></div>
+                </div>            
+            </label>
+        </div>
+    </article>
+    </main>
+</body>
+</html>
